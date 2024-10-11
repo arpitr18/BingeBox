@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #2193b0, #6dd5ed);
+    color: #333;
+}
+
+header {
+    background-color: #004080;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+}
+
+#about {
+    padding: 50px;
+    text-align: center;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.team-member {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    transition: border-radius 0.3s ease, transform 0.3s ease;
+}
+
+.team-member img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, border-radius 0.3s ease;
+}
+
+.member-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.member-info h3, .member-info p {
+    display: none;
+    margin: 0;
+}
+
+.team-member:hover .image-container {
+    border-radius: 0;
+}
+
+.team-member:hover img {
+    border-radius: 0;
+    transform: scale(1);
+}
+
+.team-member:hover .member-info {
+    width: 200px;
+    height: 300px;
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 20px;
+}
+
+.team-member:hover .member-info h3, 
+.team-member:hover .member-info p {
+    display: block;
+}
+
+#projects {
+    padding: 50px;
+    text-align: center;
+}
+
+#contact {
+    padding: 50px;
+    text-align: center;
+}
+
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
