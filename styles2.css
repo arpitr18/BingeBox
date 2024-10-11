@@ -90,14 +90,101 @@ header.black-bg {
     max-width: 40px;
 }
 
-/* Sticky Effect on Scroll */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #242424;
+  color: white;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff9900;
+}
+
+.search-box input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    height: 100vh;
+    width: 100%;
+    background-color: #242424;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+  }
+
+  .search-box input {
+    width: 150px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+/* /* Sticky Effect on Scroll */
 .sticky-nav {
     position: sticky;
     top: 0;
     z-index: 1000;
     background-color: rgba(20, 20, 20, 0.9); /* Slight transparency */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow to differentiate from content */
-}
+} */
 
 /* Movies Section CSS */
 .movies-section {
